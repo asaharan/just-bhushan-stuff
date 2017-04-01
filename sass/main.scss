@@ -21,6 +21,20 @@ body{
 	background: #1a74bb;
 	color: #fff;
 	min-height: 100vh;
+
+	.list{
+		margin-top: 12px;
+		line-height: 48px;
+		.list-item{
+			cursor: pointer;
+			padding-left: 12px;
+			border-left: solid 2px transparent;
+			&.active{
+				color: #ffa042;
+				border-left-color: #ffa042;
+			}
+		}
+	}
 }
 .main-panel{
 	@include grid-column(10);

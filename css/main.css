@@ -21,6 +21,16 @@ body {
   background: #1a74bb;
   color: #fff;
   min-height: 100vh; }
+  .left-panel .list {
+    margin-top: 12px;
+    line-height: 48px; }
+    .left-panel .list .list-item {
+      cursor: pointer;
+      padding-left: 12px;
+      border-left: solid 2px transparent; }
+      .left-panel .list .list-item.active {
+        color: #ffa042;
+        border-left-color: #ffa042; }
 
 .main-panel {
   width: calc(83.33333% - 36.66667px);
