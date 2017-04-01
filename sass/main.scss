@@ -1,0 +1,66 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+$navbar-height: 64px;
+
+body{
+	margin: 0;
+	overflow-x: hidden;
+}
+*,*:after,*:before{
+	box-sizing: border-box;
+}
+
+.body-container{
+	@include grid-container;
+	@include grid-collapse;
+}
+
+.left-panel{
+	@include grid-column(2);
+	background: #1a74bb;
+	color: #fff;
+	min-height: 100vh;
+}
+.main-panel{
+	@include grid-column(10);
+	margin-left: 0;
+	background: #eeeded;
+	min-height: 100vh;
+
+	.navbar{
+		@include grid-container;
+		line-height: $navbar-height;
+		background: #fff;
+		border-bottom: solid 1px #eee;
+
+		.search-panel{
+			@include grid-column(8);
+		}
+		.menu-panel{
+			@include grid-column(4);
+		}
+	}
+
+	.cards-container{
+		@include grid-container;
+		margin: 20px;
+		.card{
+			background: #fff;
+			border-radius: 3px;
+			padding: 12px;
+			box-shadow: 0px 0px 2px 1px rgba(171, 171, 171, 0.08);
+			margin-bottom: 20px;
+			// margin-top: 20px;
+
+			&.full-card{
+				@include grid-column(12);
+			}
+
+			&.card-3{
+				@include grid-column(4);
+			}
+		}
+
+	}
+}
